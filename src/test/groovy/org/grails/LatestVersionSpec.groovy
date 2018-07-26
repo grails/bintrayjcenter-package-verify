@@ -1,6 +1,7 @@
 package org.grails
 
 import io.micronaut.context.ApplicationContext
+import io.micronaut.runtime.server.EmbeddedServer
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
@@ -10,10 +11,10 @@ class LatestVersionSpec extends Specification {
 
     @Shared
     @AutoCleanup
-    ApplicationContext context = ApplicationContext.run()
+    EmbeddedServer embeddedServer = ApplicationContext.run(EmbeddedServer)
 
     @Shared
-    BintrayClient client = context.getBean(BintrayClient)
+    BintrayClient client = embeddedServer.applicationContext.getBean(BintrayClient)
 
 
     @Unroll

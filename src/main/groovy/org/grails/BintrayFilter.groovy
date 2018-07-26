@@ -10,7 +10,7 @@ import io.micronaut.http.filter.HttpClientFilter
 import org.reactivestreams.Publisher
 
 @CompileStatic
-@Filter('/api/${bintray.apiversion}/repos/**') // <1>
+@Filter('/api/${bintray.apiversion}/**') // <1>
 @Requires(property = "bintray.username") // <2>
 @Requires(property = "bintray.token") // <2>
 class BintrayFilter  implements HttpClientFilter {

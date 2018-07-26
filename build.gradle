@@ -49,3 +49,5 @@ shadowJar {
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
 mainClassName = "bintrayjcenter.package.verify.Application"
+
+apply from: "${rootProject.projectDir}/gradle/testVerbose.gradle"
