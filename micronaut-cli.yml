@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: bintrayjcenter.package.verify
+---
+testFramework: spock
+sourceLanguage: groovy

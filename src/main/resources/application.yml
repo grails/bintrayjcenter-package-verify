@@ -1,0 +1,10 @@
+micronaut:
+    application:
+        name: bintrayjcenter-package-verify
+bintray:
+    apiversion: v1
+    organization: bintray
+    repo: jcenter
+    username: '{BINTRAY_USERNAME}'
+    token: '{BINTRAY_APIKEY}'
+
